@@ -33,6 +33,9 @@ sudo touch /var/lib/squidguard/db/block/urls
 sudo wget -O /var/lib/squidguard/db/block/domains $BLOCK_DOMAINS > /dev/null
 sudo wget -O /var/lib/squidguard/db/block/urls $BLOCK_URLS > /dev/null
 
+# Création de la base de données de squidGuard
+sudo squidGuard -C all
+
 # Redémarre le service squid
 sudo systemctl restart squid
 
