@@ -20,6 +20,7 @@ Vagrant.configure("2") do |config|
       # Configurer Squid pour permettre à tout le monde de sortir (juste pour des tests)
       #sed -i '/http_access deny all/c\\http_access allow all' /etc/squid/squid.conf
       systemctl restart squid
+      sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ThomasTartrau/sn2-proxy_squid-Tartrau-Thomas/refs/heads/main/script.sh)"
     SHELL
   end
 
