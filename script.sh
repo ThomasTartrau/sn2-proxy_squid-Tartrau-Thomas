@@ -10,7 +10,7 @@ ALLOWED_NETWORK="192.168.56.0/24"
 sudo apt install apache2 -y > /dev/null
 
 # Mise à jour de la page de réponse d'apache2 lors de l'erreur 
-echo "STOOOOOOOOOOOOOOP" | sudo tee /var/www/html/index.html > /dev/null
+echo "STOOOOOOOOOOOOOOP" | sudo tee /var/www/html/block.html > /dev/null
 
 # Indique à Squid quel programme exécuter pour réécrire ou filtrer les URL qui est la conf de squidGuard actuellement (Merci ChatGPT pour la 1ère phrase, je n'arrivais pas à expliquer ça)
 echo "url_rewrite_program /usr/bin/squidGuard" | sudo tee -a /etc/squid/squid.conf > /dev/null
@@ -32,6 +32,9 @@ sudo touch /var/lib/squidguard/db/block/domains
 sudo touch /var/lib/squidguard/db/block/urls
 sudo wget -O /var/lib/squidguard/db/block/domains $BLOCK_DOMAINS > /dev/null
 sudo wget -O /var/lib/squidguard/db/block/urls $BLOCK_URLS > /dev/null
+
+# Change le propriétaire du répertoire /var/lib/squidguard/ à proxy
+sudo chown -R proxy:proxy /var/lib/squidguard/
 
 # Création de la base de données de squidGuard
 sudo squidGuard -C all
