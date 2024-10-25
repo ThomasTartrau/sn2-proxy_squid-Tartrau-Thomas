@@ -22,6 +22,7 @@ Vagrant.configure("2") do |config|
       systemctl restart squid
       apt-get install curl -y
       sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ThomasTartrau/sn2-proxy_squid-Tartrau-Thomas/refs/heads/main/script.sh)"
+      sudo systemctl restart squid
     SHELL
   end
 

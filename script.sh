@@ -39,8 +39,5 @@ sudo chown -R proxy:proxy /var/lib/squidguard/
 # Création de la base de données de squidGuard
 sudo squidGuard -C all
 
-# Redémarre le service squid
-sudo systemctl restart squid
-
 # Echo installed
 echo "Installed"
