@@ -4,7 +4,7 @@
 CONF_SQUIDGUARD="https://raw.githubusercontent.com/ThomasTartrau/sn2-proxy_squid-Tartrau-Thomas/refs/heads/main/squidGuard.conf"
 BLOCK_DOMAINS="https://raw.githubusercontent.com/ThomasTartrau/sn2-proxy_squid-Tartrau-Thomas/refs/heads/main/domains"
 BLOCK_URLS="https://raw.githubusercontent.com/ThomasTartrau/sn2-proxy_squid-Tartrau-Thomas/refs/heads/main/urls"
-ALLOWED_NETWORK="192.168.121.0/24"
+ALLOWED_NETWORK="192.168.56.0/24"
 
 # Installation de apache2 pour le serveur web
 sudo apt install apache2 -y > /dev/null
