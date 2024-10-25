@@ -34,7 +34,6 @@ sudo wget -O /var/lib/squidguard/db/block/domains $BLOCK_DOMAINS > /dev/null
 sudo wget -O /var/lib/squidguard/db/block/urls $BLOCK_URLS > /dev/null
 
 # Change le propriétaire du répertoire /var/lib/squidguard/ à proxy
-sudo chown -R proxy:proxy /var/lib/squidguard/
 
 # Création de la base de données de squidGuard
 sudo squidGuard -C all

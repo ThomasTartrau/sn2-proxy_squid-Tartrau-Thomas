@@ -19,9 +19,10 @@ Vagrant.configure("2") do |config|
       apt-get install -y squid squidguard squidclient
       # Configurer Squid pour permettre à tout le monde de sortir (juste pour des tests)
       #sed -i '/http_access deny all/c\\http_access allow all' /etc/squid/squid.conf
-      systemctl restart squid
+      #systemctl restart squid
       apt-get install curl -y
       sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ThomasTartrau/sn2-proxy_squid-Tartrau-Thomas/refs/heads/main/script.sh)"
+      sudo chown -R proxy:proxy /var/lib/squidguard/
       sudo systemctl restart squid
     SHELL
   end
