@@ -28,8 +28,8 @@ sudo wget -O /etc/squidguard/squidGuard.conf $CONF_SQUIDGUARD > /dev/null
 sudo mkdir /etc/squidguard/block
 
 # Récupère les fichiers qui contiennent les domaines et les urls à bloquer et les place dans le répertoire /etc/squidguard/block
-sudo wget -O /etc/squidguard/block/domains $BLOCK_DOMAINS > /dev/null
-sudo wget -O /etc/squidguard/block/urls $BLOCK_URLS > /dev/null
+sudo wget -O /var/lib/squidguard/db/block/domains $BLOCK_DOMAINS > /dev/null
+sudo wget -O /var/lib/squidguard/db/urls $BLOCK_URLS > /dev/null
 
 # Redémarre le service squid
 sudo systemctl restart squid
