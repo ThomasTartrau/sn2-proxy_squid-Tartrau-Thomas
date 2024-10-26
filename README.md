@@ -8,6 +8,8 @@ sudo apt install curl -y && sudo sh -c "$(curl -fsSL https://raw.githubuserconte
 
 ```
 
+---
+# 🇺🇸
 
 This command performs the complete installation to meet the [CDC](CDC.pdf) requirements.  
 The objective is to install:
@@ -20,7 +22,9 @@ The objective is to install:
 
 <u>Performed by Thomas TARTRAU, EPSI SN2 2024-2025</u>
 
+
 ---
+# 🇫🇷
 
 Cette commande réalise tout l'installation permettant de répondre au [CDC](CDC.pdf).
 L'objectif de ce dernier est d'installer:
